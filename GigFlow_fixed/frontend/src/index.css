@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+input::placeholder,
+textarea::placeholder {
+  color: #4b5563;
+  opacity: 1;
+}
+
+input,
+textarea {
+  color: #e4e4e4;
+}
