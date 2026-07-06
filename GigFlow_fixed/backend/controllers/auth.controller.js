@@ -2,11 +2,11 @@ import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
-
+const isProd = process.env.NODE_ENV === "production";
 const COOKIE_OPTIONS = {
   httpOnly: true,
-  sameSite: "lax",
-  secure: false
+  sameSite: isProd ? "none" : "lax",
+  secure: isProd
 };
 
 export const register = async (req, res) => {
